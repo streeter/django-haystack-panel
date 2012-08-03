@@ -1,0 +1,27 @@
+{% load i18n %}
+
+{#<h4>{% trans 'Queries' %}</h4>#}
+{% if queries %}
+    <table>
+        <thead>
+            <tr>
+                <th>{% trans "Query String" %}</th>
+                <th>{% trans "Additional Args" %}</th>
+                <th>{% trans "Additional Kwargs" %}</th>
+                <th>{% trans "Time (ms)" %}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for query in queries %}
+                <tr class="{% cycle 'djDebugOdd' 'djDebugEven' %}">
+                    <td>{{ query.query_string|safe }}</td>
+                    <td>{{ query.additional_args }}</td>
+                    <td>{{ query.additional_kwargs }}</td>
+                    <td><span title="{% if query.start %}start: {{query.start|floatformat:"-4"}} end: {{query.end|floatformat:"-4"}}{% endif %}">{{ query.time|floatformat:"2" }}</span></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p>No Haystack queries were recorded during this request.</p>
+{% endif %}

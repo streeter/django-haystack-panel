@@ -1,2 +1,3 @@
 include setup.py README.md MANIFEST.in LICENSE CHANGES AUTHORS
+recursive-include haystack_panel/templates *
 global-exclude *~
