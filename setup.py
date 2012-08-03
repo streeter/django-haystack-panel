@@ -7,7 +7,7 @@ setup(
     name='django-haystack-panel',
     version='0.1.1',
     description='A Django Debug Toolbar panel for Haystack',
-    long_description=open('README.md').read(),
+    long_description=open('README.rst').read(),
     author='Chris Streeter',
     author_email='chris@chrisstreeter.com',
     url='http://github.com/streeter/django-haystack-panel',
