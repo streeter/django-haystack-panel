@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 from debug_toolbar.panels import DebugPanel
 
@@ -47,4 +48,5 @@ class HaystackDebugPanel(DebugPanel):
 
         self.record_stats({
             'queries': query_list,
+            'debug': getattr(settings, 'DEBUG', False),
         })

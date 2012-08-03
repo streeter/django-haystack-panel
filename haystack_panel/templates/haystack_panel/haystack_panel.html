@@ -25,5 +25,12 @@
         </tbody>
     </table>
 {% else %}
-    <p>No Haystack queries were recorded during this request.</p>
+    {% if debug %}
+        <p>No Haystack queries were recorded during this request.</p>
+    {% else %}
+        <p style="padding: 10px 15px;">
+            <code style="display: inline;">DEBUG</code> is set to <code style="display: inline;">False</code>. This means
+            that Haystack query logging is disabled.
+        </p>
+    {% endif %}
 {% endif %}
