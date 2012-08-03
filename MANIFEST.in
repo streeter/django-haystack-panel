@@ -1,0 +1,2 @@
+include setup.py README.md MANIFEST.in LICENSE CHANGES AUTHORS
+global-exclude *~
