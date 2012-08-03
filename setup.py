@@ -1,12 +1,10 @@
 #!/usr/bin/env python
 
-import os
-import sys
 from setuptools import setup, find_packages
 
 
 setup(
-    name='haystack_panel',
+    name='django-haystack-panel',
     version='0.1.0',
     description='A Django Debug Toolbar panel for Haystack',
     long_description=open('README.md').read(),
