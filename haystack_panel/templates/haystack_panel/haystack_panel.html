@@ -15,8 +15,8 @@
             {% for query in queries %}
                 <tr class="{% cycle 'djDebugOdd' 'djDebugEven' %}">
                     <td>{{ query.query_string }}</td>
-                    <td>{{ query.additional_args|pprint|linebreaksbr }}</td>
-                    <td>{{ query.additional_kwargs|pprint|linebreaksbr }}</td>
+                    <td>{% if query.additional_args %}<code>{{ query.additional_args|pprint }}</code>{% endif %}</td>
+                    <td>{% if query.additional_kwargs %}<code>{{ query.additional_kwargs|pprint }}</code>{% endif %}</td>
                     <td>
                         <span title="{% if query.start %}start: {{query.start|floatformat:"-3"}} end: {{query.stop|floatformat:"-3"}}{% endif %}">{{ query.time|floatformat:"3" }}</span>
                     </td>
