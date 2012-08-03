@@ -21,7 +21,9 @@ or install the development version from source:
 pip install git+git@github.com:streeter/django-haystack-panel.git
 ```
 
-Then add `haystack_panel` to your `INSTALLED\_APPS`.
+Then add `haystack_panel` to your `INSTALLED\_APPS` so that we can find the
+templates in the panel. Also, add `'haystack_panel.panel.HaystackDebugPanel'`
+to your `DEBUG_TOOLBAR_PANELS`.
 
 ## Usage
 
