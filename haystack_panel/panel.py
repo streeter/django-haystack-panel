@@ -22,7 +22,7 @@ class HaystackDebugPanel(DebugPanel):
         if haystack_version == 1:
             return len(queries)
         else:
-            return sum(map(lambda c: len(c), connections.values()))
+            return sum(map(lambda conn: len(conn.queries), connections.all()))
 
     def nav_title(self):
         return _('Haystack Queries')
@@ -42,7 +42,7 @@ class HaystackDebugPanel(DebugPanel):
         if haystack_version == 1:
             query_list = [q for q in queries]
         else:
-            query_list = [q for alias, qs in connections.iteritems() for q in qs]
+            query_list = [q for conn in connections.all() for q in conn.queries]
             query_list.sort(key=lambda q: q['start'])
 
         self.record_stats({
