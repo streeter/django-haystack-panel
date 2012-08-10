@@ -2,4 +2,13 @@
 0.1.0
 * Initial implementation
 
-(History beyond 0.1.0 is not present)
+0.1.1
+* Bug fixes
+
+0.1.2
+* ??
+
+0.1.3
+* Support Django Debug Toolbar versions 0.8.x
+
+(History beyond 0.1.3 is not present)

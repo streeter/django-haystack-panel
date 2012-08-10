@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='django-haystack-panel',
-    version='0.1.2',
+    version='0.1.3',
     description='A Django Debug Toolbar panel for Haystack',
     long_description=open('README.rst').read(),
     author='Chris Streeter',
