@@ -36,5 +36,11 @@ There are no tests yet. Yeah, I know, I need to add some tests. However,
 this has been tested with Haystack version 2.0. I also expect it to work on
 at least Haystack >= 1.2.x. Let me know if other versions also work.
 
+License
+-------
+
+Uses the `MIT`_ license.
+
 
 .. _Django Debug Toolbar: https://github.com/django-debug-toolbar/django-debug-toolbar
+.. _MIT: http://opensource.org/licenses/MIT
