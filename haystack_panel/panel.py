@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.template.loader import render_to_string
 from django.utils.translation import ugettext_lazy as _
-from debug_toolbar.panels import DebugPanel
+from debug_toolbar.panels import Panel
 
 try:
     from haystack.backends import queries
@@ -11,7 +11,7 @@ except ImportError:
     haystack_version = 2
 
 
-class HaystackDebugPanel(DebugPanel):
+class HaystackDebugPanel(Panel):
     """
     Panel that displays queries made by Haystack backends.
     """
@@ -54,11 +54,3 @@ class HaystackDebugPanel(DebugPanel):
     def process_response(self, request, response):
         if hasattr(self, 'record_stats'):
             self.record_stats(self.get_context())
-
-    def content(self):
-        if hasattr(self, 'record_stats'):
-            return super(HaystackDebugPanel, self).content()
-        else:
-            context = self.context.copy()
-            context.update(self.get_context())
-            return render_to_string(self.template, context)

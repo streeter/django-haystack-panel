@@ -13,6 +13,9 @@ setup(
     url='http://github.com/streeter/django-haystack-panel',
     license='MIT',
     packages=find_packages(),
+    install_requires=[
+        'django-debug-toolbar>=1.0',
+    ],
     include_package_data=True,
     zip_safe=False,
     classifiers=[
