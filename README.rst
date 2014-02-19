@@ -6,7 +6,7 @@ A Django Debug Toolbar panel for Haystack
 About
 -----
 
-This is a panel for `Django Debug Toolbar`_ that displays query results from
+This is a panel for `Django Debug Toolbar`_ 1.x that displays query results from
 Haystack.
 
 Installation
