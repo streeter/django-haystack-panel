@@ -4,7 +4,7 @@
 haystack_panel
 ~~~~~~~~~~~~~~
 
-:copyright: (c) 2012 by Chris Streeter.
+:copyright: (c) 2014 by Chris Streeter.
 :license: See LICENSE for more details.
 
 """
@@ -19,6 +19,6 @@ except Exception, e:
 
 __title__ = 'haystack_panel'
 __author__ = 'Chris Streeter'
-__copyright__ = 'Copyright 2012 Chris Streter'
+__copyright__ = 'Copyright 2014 Chris Streeter'
 
 VERSION = __version__
