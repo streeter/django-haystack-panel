@@ -1,6 +1,14 @@
 #!/usr/bin/env python
 
+import os
+import sys
+
 from setuptools import setup, find_packages
+
+
+if sys.argv[-1] == 'publish':
+    os.system('python setup.py register sdist bdist_wheel upload')
+    sys.exit()
 
 
 setup(
