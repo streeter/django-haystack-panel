@@ -13,7 +13,7 @@ import pkg_resources
 
 try:
     __version__ = pkg_resources.get_distribution('haystack_panel').version
-except Exception, e:
+except Exception:
     __version__ = 'unknown'
 
 
