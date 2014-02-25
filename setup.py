@@ -13,7 +13,7 @@ if sys.argv[-1] == 'publish':
 
 setup(
     name='django-haystack-panel',
-    version='0.2.0',
+    version='0.2.1',
     description='A Django Debug Toolbar panel for Haystack',
     long_description=open('README.rst').read(),
     author='Chris Streeter',
